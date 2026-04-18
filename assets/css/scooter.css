@@ -1,0 +1,169 @@
+/* ============================================================
+   RUDRA KITS – scooter.css
+   Overrides and additions for the scooter page
+   ============================================================ */
+
+/* ── NAV ACTIVE LINK ── */
+.nav-link--active {
+  color: #F5C518 !important;
+  font-weight: 600 !important;
+}
+
+/* ============================================================
+   HERO – scooter variant
+   Background is dark with a subtle orange gradient overlay
+   to visually differentiate from the bici hero
+   ============================================================ */
+.hero--scooter {
+  background: #0d0d0d;
+}
+
+.hero-bg--scooter {
+  background:
+    radial-gradient(ellipse 60% 50% at 80% 40%, rgba(245,160,0,0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 20% 70%, rgba(245,197,24,0.06) 0%, transparent 70%),
+    #111;
+}
+
+/* Animated grid pattern for depth */
+.hero-bg--scooter::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(245,197,24,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245,197,24,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: 0;
+}
+
+.hero-bg--scooter::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(13,13,13,0.2) 0%,
+    rgba(13,13,13,0.4) 50%,
+    rgba(13,13,13,0.88) 100%
+  );
+  z-index: 1;
+}
+
+/* ============================================================
+   COMPATIBILIDAD SECTION
+   ============================================================ */
+.compat-section {
+  background: #111;
+  padding: 80px 48px 88px;
+}
+
+.compat-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.compat-title {
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0 0 16px;
+}
+.compat-title .yellow { color: #F5C518; }
+
+.compat-desc {
+  font-size: 15px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+
+.compat-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.compat-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+}
+
+/* stat cards grid */
+.compat-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.compat-stat-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  padding: 24px 20px;
+  text-align: center;
+  transition: border-color 0.2s, background 0.2s;
+}
+.compat-stat-card:hover {
+  border-color: rgba(245,197,24,0.4);
+  background: rgba(245,197,24,0.05);
+}
+
+.csc-value {
+  font-size: 28px;
+  font-weight: 900;
+  color: #F5C518;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.csc-label {
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+
+/* ============================================================
+   SCOOTER SVG preview overrides
+   ============================================================ */
+.preview-img-area--scooter {
+  background: #1a1a1a;
+  min-height: 220px;
+}
+
+.scooter-svg {
+  width: 300px;
+  height: 180px;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.4));
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+  .compat-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .compat-section { padding: 60px 20px; }
+}
+
+@media (max-width: 540px) {
+  .compat-cards { grid-template-columns: 1fr 1fr; }
+}

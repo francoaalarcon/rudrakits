@@ -1,0 +1,225 @@
+/* ============================================================
+   RUDRA KITS – beneficios.css
+   ============================================================ */
+
+.nav-link--active { color: #F5C518 !important; font-weight: 600 !important; }
+
+/* HERO */
+.ben-hero {
+  background: #111;
+  padding: 130px 48px 72px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.ben-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 55% 60% at 50% 0%, rgba(245,197,24,0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+.ben-hero-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
+.ben-hero-title {
+  font-size: clamp(32px, 5vw, 54px);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1.1;
+  margin: 14px 0 18px;
+}
+.ben-hero-title .yellow { color: #F5C518; }
+.ben-hero-sub { font-size: 16px; color: rgba(255,255,255,0.6); line-height: 1.7; }
+
+/* NUMBERS */
+.ben-numbers {
+  background: #F5C518;
+  padding: 44px 48px;
+}
+.ben-numbers-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+}
+.ben-num-card {
+  text-align: center;
+  padding: 8px 20px;
+  border-right: 1px solid rgba(0,0,0,0.12);
+}
+.ben-num-card:last-child { border-right: none; }
+.bnc-value { font-size: 32px; font-weight: 900; color: #1a1000; letter-spacing: -0.02em; }
+.bnc-label { font-size: 12px; color: rgba(26,16,0,0.65); font-weight: 500; margin-top: 4px; }
+
+/* MAIN SECTION */
+.ben-main { background: #f7f7f5; padding: 80px 48px 88px; }
+.ben-main-inner { max-width: 1000px; margin: 0 auto; }
+
+.ben-section-header { margin-bottom: 52px; }
+.ben-section-title {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #111;
+  letter-spacing: -0.02em;
+  margin: 8px 0 0;
+}
+.ben-section-title .yellow { color: #F5C518; }
+
+/* benefit item */
+.ben-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 40px;
+  align-items: start;
+  padding: 52px 0;
+  border-bottom: 1px solid #e5e5e3;
+}
+.ben-item:last-child { border-bottom: none; }
+.ben-item--reverse { direction: rtl; }
+.ben-item--reverse > * { direction: ltr; }
+
+.ben-item-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.ben-item-icon {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  background: rgba(245,197,24,0.12);
+  border: 2px solid rgba(245,197,24,0.25);
+  display: flex; align-items: center; justify-content: center;
+}
+.ben-item-number {
+  font-size: 13px;
+  font-weight: 800;
+  color: #ccc;
+  letter-spacing: 0.1em;
+}
+
+.ben-item-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #111;
+  margin: 0 0 14px;
+  line-height: 1.3;
+}
+.ben-item-desc { font-size: 15px; color: #555; line-height: 1.75; margin: 0 0 20px; }
+
+.ben-item-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.ben-tag {
+  background: rgba(245,197,24,0.1);
+  border: 1px solid rgba(245,197,24,0.35);
+  color: #b8890a;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 999px;
+}
+
+/* comparativa */
+.ben-comparativa {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+  max-width: 440px;
+}
+.cmp-col {
+  border-radius: 12px;
+  padding: 20px;
+  border: 1.5px solid #e5e5e3;
+  background: #fff;
+}
+.cmp-col--rudra { border-color: #F5C518; background: rgba(245,197,24,0.04); }
+.cmp-label { font-size: 11px; font-weight: 700; color: #aaa; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+.cmp-price { font-size: 22px; font-weight: 900; color: #333; margin-bottom: 12px; }
+.cmp-price span { font-size: 13px; font-weight: 500; color: #888; }
+.cmp-price--yellow { color: #F5A800; }
+.cmp-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
+.cmp-list li { font-size: 13px; color: #555; padding-left: 14px; position: relative; }
+.cmp-list li::before { content: '•'; position: absolute; left: 0; color: #ccc; }
+.cmp-col--rudra .cmp-list li::before { color: #F5C518; }
+
+/* TESTIMONIOS */
+.ben-testimonios { background: #fff; padding: 80px 48px 88px; }
+.ben-test-inner { max-width: 1100px; margin: 0 auto; }
+
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.test-card {
+  background: #f9f9f7;
+  border: 1px solid #e8e8e6;
+  border-radius: 16px;
+  padding: 28px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: box-shadow 0.2s;
+}
+.test-card:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.07); }
+.test-card--featured {
+  border-color: #F5C518;
+  background: rgba(245,197,24,0.04);
+  box-shadow: 0 4px 24px rgba(245,197,24,0.12);
+}
+.test-stars { font-size: 16px; color: #F5C518; letter-spacing: 2px; }
+.test-text { font-size: 14px; color: #444; line-height: 1.7; font-style: italic; flex: 1; }
+.test-author { display: flex; align-items: center; gap: 12px; margin-top: auto; }
+.test-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: #F5C518; color: #1a1000;
+  font-size: 13px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.test-name { font-size: 13.5px; font-weight: 700; color: #111; }
+.test-kit { font-size: 11.5px; color: #888; }
+
+/* CTA SECTION */
+.ben-cta-section {
+  background: #111;
+  padding: 80px 48px;
+  text-align: center;
+}
+.ben-cta-inner { max-width: 660px; margin: 0 auto; }
+.ben-cta-title {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+.ben-cta-title .yellow { color: #F5C518; }
+.ben-cta-sub { font-size: 16px; color: rgba(255,255,255,0.6); margin-bottom: 36px; }
+.ben-cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .ben-numbers-inner { grid-template-columns: repeat(3, 1fr); }
+  .ben-num-card:nth-child(3) { border-right: none; }
+  .ben-main { padding: 56px 20px; }
+  .ben-item { grid-template-columns: 1fr; gap: 20px; }
+  .ben-item--reverse { direction: ltr; }
+  .ben-item-visual { flex-direction: row; }
+  .testimonios-grid { grid-template-columns: 1fr; }
+  .ben-testimonios { padding: 56px 20px; }
+  .ben-cta-section { padding: 60px 20px; }
+  .ben-hero { padding: 110px 24px 56px; }
+}
+@media (max-width: 540px) {
+  .ben-numbers-inner { grid-template-columns: 1fr 1fr; }
+  .ben-num-card { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.12); }
+  .ben-comparativa { grid-template-columns: 1fr; }
+  .ben-numbers { padding: 36px 20px; }
+}
