@@ -1,0 +1,396 @@
+/* ============================================================
+   RUDRA KITS – servicios.css
+   ============================================================ */
+
+.nav-link--active { color: #F5C518 !important; font-weight: 600 !important; }
+
+/* ── HERO ── */
+.srv-hero {
+  background: #111;
+  padding: 130px 48px 72px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.srv-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 55% 60% at 50% 0%, rgba(245,197,24,0.10) 0%, transparent 70%);
+  pointer-events: none;
+}
+.srv-hero-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+
+.srv-hero-title {
+  font-size: clamp(32px, 5vw, 54px);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1.1;
+  margin: 14px 0 18px;
+}
+.srv-hero-title .yellow { color: #F5C518; }
+
+.srv-hero-sub {
+  font-size: 16px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto 32px;
+}
+
+.srv-hero-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+/* ── NUMBERS BAR ── */
+.srv-numbers {
+  background: #F5C518;
+  padding: 44px 48px;
+}
+.srv-numbers-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.srv-num-card {
+  text-align: center;
+  padding: 8px 20px;
+  border-right: 1px solid rgba(0,0,0,0.12);
+}
+.srv-num-card:last-child { border-right: none; }
+.snc-value { font-size: 32px; font-weight: 900; color: #1a1000; letter-spacing: -0.02em; }
+.snc-label { font-size: 12px; color: rgba(26,16,0,0.65); font-weight: 500; margin-top: 4px; }
+
+/* ── MAIN SECTION ── */
+.srv-main { background: #f7f7f5; padding: 80px 48px 88px; }
+.srv-main-inner { max-width: 1000px; margin: 0 auto; }
+
+.srv-section-header { margin-bottom: 52px; }
+.srv-section-title {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #111;
+  letter-spacing: -0.02em;
+  margin: 8px 0 0;
+}
+.srv-section-title .yellow { color: #F5C518; }
+.srv-section-sub { font-size: 15px; color: #666; margin-top: 10px; line-height: 1.65; }
+
+/* service item rows */
+.srv-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 40px;
+  align-items: start;
+  padding: 52px 0;
+  border-bottom: 1px solid #e5e5e3;
+}
+.srv-item:last-child { border-bottom: none; }
+.srv-item--reverse { direction: rtl; }
+.srv-item--reverse > * { direction: ltr; }
+
+.srv-item-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.srv-item-icon {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  background: rgba(245,197,24,0.12);
+  border: 2px solid rgba(245,197,24,0.25);
+  display: flex; align-items: center; justify-content: center;
+}
+.srv-item-number {
+  font-size: 13px;
+  font-weight: 800;
+  color: #ccc;
+  letter-spacing: 0.1em;
+}
+
+.srv-service-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #F5A800;
+  margin-bottom: 8px;
+}
+
+.srv-item-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #111;
+  margin: 0 0 14px;
+  line-height: 1.3;
+}
+.srv-item-desc { font-size: 15px; color: #555; line-height: 1.75; margin: 0 0 20px; }
+
+.srv-item-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.srv-tag {
+  background: rgba(245,197,24,0.1);
+  border: 1px solid rgba(245,197,24,0.35);
+  color: #b8890a;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 999px;
+}
+
+.srv-price-block {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 4px;
+}
+.srv-price-label { font-size: 12px; color: #aaa; font-weight: 500; }
+.srv-price { font-size: 22px; font-weight: 900; color: #F5A800; }
+.srv-price-note { font-size: 12px; color: #999; }
+
+/* BMS comparativa (reused from baterias) */
+.srv-vs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 0 0 20px;
+  max-width: 480px;
+}
+.vs-col {
+  border-radius: 12px;
+  padding: 20px;
+  border: 1.5px solid #e5e5e3;
+  background: #fff;
+}
+.vs-col--buena { border-color: #F5C518; background: rgba(245,197,24,0.04); }
+.vs-label { font-size: 11px; font-weight: 700; color: #aaa; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+.vs-title { font-size: 16px; font-weight: 900; color: #333; margin-bottom: 10px; }
+.vs-title--yellow { color: #F5A800; }
+.vs-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
+.vs-list li { font-size: 13px; color: #555; padding-left: 14px; position: relative; }
+.vs-list li::before { content: '•'; position: absolute; left: 0; color: #ccc; }
+.vs-col--buena .vs-list li::before { color: #F5C518; }
+
+/* ── EXTRA SERVICES ── */
+.srv-extra {
+  background: #111;
+  padding: 80px 48px 88px;
+  position: relative;
+  overflow: hidden;
+}
+.srv-extra::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 20% 50%, rgba(245,197,24,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.srv-extra-inner { max-width: 1000px; margin: 0 auto; position: relative; z-index: 1; }
+.srv-extra .srv-section-title { color: #fff; }
+
+.extra-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 52px;
+}
+
+.extra-card {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 14px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.2s;
+}
+.extra-card:hover { border-color: rgba(245,197,24,0.35); }
+
+.extra-icon {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: rgba(245,197,24,0.1);
+  border: 1.5px solid rgba(245,197,24,0.2);
+  display: flex; align-items: center; justify-content: center;
+}
+.extra-step {
+  font-size: 11px;
+  font-weight: 800;
+  color: #F5A800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.extra-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.3;
+}
+.extra-desc { font-size: 13.5px; color: rgba(255,255,255,0.55); line-height: 1.65; flex: 1; }
+.extra-price {
+  font-size: 15px;
+  font-weight: 900;
+  color: #F5A800;
+  margin-top: 4px;
+}
+
+/* ── PROCESO ── */
+.srv-proceso {
+  background: #fff;
+  padding: 80px 48px 88px;
+  border-top: 1px solid #ebebeb;
+}
+.srv-proceso-inner { max-width: 900px; margin: 0 auto; }
+
+.proceso-steps {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  margin-top: 52px;
+  flex-wrap: wrap;
+}
+
+.proceso-step {
+  flex: 1;
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.proceso-connector {
+  flex: 0 0 32px;
+  height: 2px;
+  background: linear-gradient(to right, #F5C518, rgba(245,197,24,0.2));
+  align-self: 56px;
+  margin-top: 26px;
+}
+
+.paso-num {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: #F5C518;
+  color: #1a1000;
+  font-size: 16px;
+  font-weight: 900;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.paso-content { padding: 0 8px; }
+.paso-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 8px;
+}
+.paso-desc { font-size: 13px; color: #666; line-height: 1.6; }
+
+/* ── FAQ ── */
+.srv-faq {
+  background: #f7f7f5;
+  padding: 80px 48px 88px;
+}
+.srv-faq-inner { max-width: 760px; margin: 0 auto; }
+
+.faq-list { margin-top: 52px; display: flex; flex-direction: column; gap: 0; }
+
+.faq-item {
+  border-bottom: 1px solid #e5e5e3;
+}
+.faq-item:first-child { border-top: 1px solid #e5e5e3; }
+
+.faq-q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 4px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+.faq-q::-webkit-details-marker { display: none; }
+.faq-q:hover { color: #F5A800; }
+
+.faq-arrow {
+  flex-shrink: 0;
+  color: #aaa;
+  transition: transform 0.2s;
+}
+details[open] .faq-arrow { transform: rotate(180deg); }
+details[open] .faq-q { color: #F5A800; }
+details[open] .faq-arrow { color: #F5A800; }
+
+.faq-a {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.75;
+  padding: 0 4px 22px;
+}
+
+/* ── CTA SECTION ── */
+.srv-cta-section {
+  background: #111;
+  padding: 80px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.srv-cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 55% 80% at 50% 100%, rgba(245,197,24,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.srv-cta-inner { max-width: 660px; margin: 0 auto; position: relative; z-index: 1; }
+
+.srv-cta-title {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+.srv-cta-title .yellow { color: #F5C518; }
+.srv-cta-sub { font-size: 16px; color: rgba(255,255,255,0.6); margin-bottom: 36px; line-height: 1.65; }
+.srv-cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .srv-numbers-inner { grid-template-columns: repeat(2, 1fr); }
+  .srv-num-card:nth-child(2) { border-right: none; }
+  .srv-main { padding: 56px 20px; }
+  .srv-item { grid-template-columns: 1fr; gap: 20px; }
+  .srv-item--reverse { direction: ltr; }
+  .srv-item-visual { flex-direction: row; }
+  .srv-vs { grid-template-columns: 1fr; max-width: 100%; }
+  .extra-grid { grid-template-columns: 1fr; }
+  .srv-extra { padding: 56px 20px; }
+  .srv-proceso { padding: 56px 20px; }
+  .proceso-steps { flex-direction: column; align-items: center; gap: 8px; }
+  .proceso-connector { width: 2px; height: 32px; background: linear-gradient(to bottom, #F5C518, rgba(245,197,24,0.2)); flex: 0 0 32px; margin-top: 0; align-self: auto; }
+  .srv-faq { padding: 56px 20px; }
+  .srv-cta-section { padding: 60px 20px; }
+  .srv-hero { padding: 110px 24px 56px; }
+}
+@media (max-width: 540px) {
+  .srv-numbers-inner { grid-template-columns: 1fr 1fr; }
+  .srv-num-card { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.12); }
+  .srv-numbers { padding: 36px 20px; }
+  .extra-grid { grid-template-columns: 1fr; }
+}

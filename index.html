@@ -20,9 +20,10 @@
   </a>
 
   <ul class="nav-links">
-    <li><a href="/" data-page="index" class="nav-link--active">Bicicletas</a></li>
-    <li><a href="/scooter/" data-page="scooter">Scooters</a></li>
-    <li><a href="/beneficios/" data-page="beneficios">Beneficios</a></li>
+    <li><a href="/" data-page="index" class="nav-link--active">Kits</a></li>
+    <li><a href="/bicicletas/" data-page="bicicletas">Bicicletas</a></li>
+    <li><a href="/baterias/" data-page="baterias">Baterías de Litio</a></li>
+    <li><a href="/servicios/" data-page="servicios">Servicios Técnicos</a></li>
     <li><a href="/contacto/" data-page="contacto">Contacto</a></li>
   </ul>
 
@@ -65,7 +66,10 @@
         <svg viewBox="0 0 24 24"><path d="M13 2L4.5 13.5H11L10 22L20.5 10H14L13 2Z"/></svg>
         Configura Tu Kit Ahora
       </a>
-      <a href="#kits" class="btn-ghost">Ver Kits Disponibles</a>
+      <button class="btn-ghost" id="btnVerVideo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
+        Ver Video
+      </button>
     </div>
   </div>
 
@@ -434,18 +438,16 @@
         <li><a href="#kits">Eco Furia 350W</a></li>
         <li><a href="#kits">Veloz Titan 500W</a></li>
         <li><a href="#kits">Blitz 1200W</a></li>
-        <li><a href="/scooter/#kits-sc">Urban Volt 1500W</a></li>
-        <li><a href="/scooter/#kits-sc">Storm Rider 3000W</a></li>
-        <li><a href="/scooter/#kits-sc">Titan Moto 5000W</a></li>
       </ul>
     </div>
 
     <div class="footer-col">
       <div class="footer-col-title">NAVEGACIÓN</div>
       <ul class="footer-links">
-        <li><a href="/">Bicicletas</a></li>
-        <li><a href="/scooter/">Scooters</a></li>
-        <li><a href="/beneficios/">Beneficios</a></li>
+        <li><a href="/">Kits de Conversión</a></li>
+        <li><a href="/bicicletas/">Bicicletas</a></li>
+        <li><a href="/baterias/">Baterías de Litio</a></li>
+        <li><a href="/servicios/">Servicios Técnicos</a></li>
         <li><a href="/contacto/">Contacto</a></li>
         <li><a href="/terminos/">Términos y Condiciones</a></li>
         <li><a href="/privacidad/">Política de Privacidad</a></li>
@@ -486,6 +488,50 @@
   </div>
 </footer>
 
+<!-- VIDEO MODAL -->
+<div id="videoModal" class="video-modal" aria-hidden="true" role="dialog" aria-label="Video Rudra Kits">
+  <div class="video-modal-backdrop"></div>
+  <div class="video-modal-container">
+    <button class="video-modal-close" id="videoModalClose" aria-label="Cerrar video">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="22" height="22"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="video-modal-iframe-wrap">
+      <iframe id="videoIframe" src="" allow="autoplay; encrypted-media" allowfullscreen title="Video Rudra Kits"></iframe>
+    </div>
+  </div>
+</div>
+
 <script src="/assets/js/main.js"></script>
+<script>
+(function () {
+  var modal = document.getElementById('videoModal');
+  var iframe = document.getElementById('videoIframe');
+  var openBtn = document.getElementById('btnVerVideo');
+  var closeBtn = document.getElementById('videoModalClose');
+  var backdrop = modal.querySelector('.video-modal-backdrop');
+  var VIDEO_SRC = 'https://www.youtube.com/embed/wDchsz8nmbo?autoplay=1&rel=0';
+
+  function openModal() {
+    iframe.src = VIDEO_SRC;
+    modal.classList.add('video-modal--open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('video-modal--open');
+    modal.setAttribute('aria-hidden', 'true');
+    iframe.src = '';
+    document.body.style.overflow = '';
+  }
+
+  openBtn.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+  backdrop.addEventListener('click', closeModal);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && modal.classList.contains('video-modal--open')) closeModal();
+  });
+})();
+</script>
 </body>
 </html>

@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catálogo de Bicicletas – Rudra Kits</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/bicicletas.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════ -->
+<nav>
+  <a href="/" class="nav-logo">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M13 2L4.5 13.5H11L10 22L20.5 10H14L13 2Z"/>
+    </svg>
+    RUDRA KITS
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="/" data-page="index">Kits</a></li>
+    <li><a href="/bicicletas/" data-page="bicicletas" class="nav-link--active">Bicicletas</a></li>
+    <li><a href="/baterias/" data-page="baterias">Baterías de Litio</a></li>
+    <li><a href="/servicios/" data-page="servicios">Servicios Técnicos</a></li>
+    <li><a href="/contacto/" data-page="contacto">Contacto</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <button class="nav-cart" aria-label="Carrito">
+      <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+    </button>
+    <a href="/#configurador" class="btn-primary">
+      <svg viewBox="0 0 24 24"><path d="M13 2L4.5 13.5H11L10 22L20.5 10H14L13 2Z"/></svg>
+      Configurar Kit
+    </a>
+  </div>
+</nav>
+
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<section class="hero hero--bici">
+  <div class="hero-bg hero-bg--bici"></div>
+
+  <div class="hero-content">
+    <span class="hero-badge">
+      <svg viewBox="0 0 24 24"><path d="M13 2L4.5 13.5H11L10 22L20.5 10H14L13 2Z"/></svg>
+      Catálogo oficial Rudra
+    </span>
+
+    <h1 class="hero-title">
+      <span class="white">Elige la bici ideal<br></span>
+      <span class="yellow">para tu kit eléctrico</span><br>
+      <span class="white">y conquista Lima</span>
+    </h1>
+
+    <p class="hero-desc">
+      Cada bicicleta de nuestro catálogo está <strong>certificada y probada</strong> con los kits Rudra. Elige por tipo, presupuesto y uso — te ayudamos a encontrar la combinación perfecta para dominar la ciudad.
+    </p>
+
+    <div class="hero-ctas">
+      <a href="#catalogo" class="btn-hero-primary">
+        <svg viewBox="0 0 24 24"><path d="M13 2L4.5 13.5H11L10 22L20.5 10H14L13 2Z"/></svg>
+        Ver Catálogo Completo
+      </a>
+      <a href="/#configurador" class="btn-ghost">Configurar Kit</a>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-value">6</div>
+      <div class="stat-label">Modelos Disponibles</div>
+    </div>
+    <div class="stat-sep"></div>
+    <div class="stat">
+      <div class="stat-value">100%</div>
+      <div class="stat-label">Kit Compatible</div>
+    </div>
+    <div class="stat-sep"></div>
+    <div class="stat">
+      <div class="stat-value">30 días</div>
+      <div class="stat-label">Garantía</div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     CATÁLOGO
+══════════════════════════════════════ -->
+<section class="catalog-section" id="catalogo">
+  <div class="catalog-header">
+    <span class="section-badge">
+      <svg viewBox="0 0 24 24" width="13" height="13" fill="#F5C518"><path d="M13 2L4.5 13.5H11L10 22L20.5 10H14L13 2Z"/></svg>
+      Catálogo 2026
+    </span>
+    <h2 class="catalog-title">ENCUENTRA TU BICI Y <span>ELECTRIFÍCALA</span></h2>
+    <p class="catalog-subtitle">Filtra por tipo de uso y elige la bicicleta que mejor se adapta a tu estilo de vida y tu kit Rudra.</p>
+  </div>
+
+  <!-- FILTROS -->
+  <div class="catalog-filters">
+    <button class="filter-btn filter-btn--active" data-filter="all">Todos</button>
+    <button class="filter-btn" data-filter="urbana">Urbanas</button>
+    <button class="filter-btn" data-filter="montana">Montaña</button>
+    <button class="filter-btn" data-filter="cargo">Cargo</button>
+    <button class="filter-btn" data-filter="plegable">Plegables</button>
+  </div>
+
+  <!-- GRID -->
+  <div class="catalog-grid" id="catalogGrid">
+
+    <!-- ── CITY CRUISE ── -->
+    <div class="bike-card" data-type="urbana">
+      <div class="bike-type-badge">Urbana</div>
+      <div class="bike-visual">
+        <!-- City bike SVG -->
+        <svg viewBox="0 0 220 145" xmlns="http://www.w3.org/2000/svg" width="200" height="132">
+          <!-- rear wheel -->
+          <circle cx="52" cy="100" r="40" fill="none" stroke="#888" stroke-width="2.5"/>
+          <circle cx="52" cy="100" r="27" fill="none" stroke="#666" stroke-width="1.2"/>
+          <line x1="52" y1="60" x2="52" y2="140" stroke="#555" stroke-width="1"/>
+          <line x1="12" y1="100" x2="92" y2="100" stroke="#555" stroke-width="1"/>
+          <line x1="23.6" y1="71.6" x2="80.4" y2="128.4" stroke="#555" stroke-width="1"/>
+          <line x1="80.4" y1="71.6" x2="23.6" y2="128.4" stroke="#555" stroke-width="1"/>
+          <circle cx="52" cy="100" r="7" fill="#444" stroke="#555" stroke-width="1.5"/>
+          <!-- rear fender -->
+          <path d="M22 68 Q52 48 82 68" fill="none" stroke="#F5C518" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+          <!-- frame -->
+          <line x1="52" y1="100" x2="112" y2="72" stroke="#ccc" stroke-width="3" stroke-linecap="round"/>
+          <line x1="112" y1="72" x2="100" y2="36" stroke="#ccc" stroke-width="3" stroke-linecap="round"/>
+          <line x1="100" y1="36" x2="148" y2="44" stroke="#bbb" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="112" y1="72" x2="148" y2="44" stroke="#ccc" stroke-width="3" stroke-linecap="round"/>
+          <line x1="100" y1="36" x2="52" y2="100" stroke="#aaa" stroke-width="2" stroke-linecap="round"/>
+          <line x1="148" y1="44" x2="168" y2="100" stroke="#bbb" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- front wheel -->
+          <circle cx="168" cy="100" r="40" fill="none" stroke="#888" stroke-width="2.5"/>
+          <circle cx="168" cy="100" r="27" fill="none" stroke="#666" stroke-width="1.2"/>
+          <line x1="168" y1="60" x2="168" y2="140" stroke="#555" stroke-width="1"/>
+          <line x1="128" y1="100" x2="208" y2="100" stroke="#555" stroke-width="1"/>
+          <line x1="139.6" y1="71.6" x2="196.4" y2="128.4" stroke="#555" stroke-width="1"/>
+          <line x1="196.4" y1="71.6" x2="139.6" y2="128.4" stroke="#555" stroke-width="1"/>
+          <circle cx="168" cy="100" r="7" fill="#444" stroke="#555" stroke-width="1.5"/>
+          <!-- front fender -->
+          <path d="M138 68 Q168 48 198 68" fill="none" stroke="#F5C518" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+          <!-- saddle -->
+          <line x1="90" y1="32" x2="112" y2="32" stroke="#aaa" stroke-width="4" stroke-linecap="round"/>
+          <line x1="101" y1="32" x2="101" y2="43" stroke="#999" stroke-width="2"/>
+          <!-- handlebar upright -->
+          <line x1="148" y1="44" x2="150" y2="28" stroke="#aaa" stroke-width="3" stroke-linecap="round"/>
+          <line x1="143" y1="26" x2="158" y2="26" stroke="#aaa" stroke-width="4" stroke-linecap="round"/>
+          <!-- chainring -->
+          <circle cx="112" cy="72" r="11" fill="none" stroke="#777" stroke-width="2"/>
+          <circle cx="112" cy="72" r="5" fill="#555"/>
+          <!-- cranks -->
+          <line x1="112" y1="72" x2="120" y2="80" stroke="#777" stroke-width="2" stroke-linecap="round"/>
+          <line x1="112" y1="72" x2="104" y2="64" stroke="#777" stroke-width="2" stroke-linecap="round"/>
+          <!-- rear rack -->
+          <rect x="64" y="58" width="38" height="5" rx="2" fill="none" stroke="#F5C518" stroke-width="1.8" opacity="0.5"/>
+          <line x1="70" y1="63" x2="68" y2="72" stroke="#F5C518" stroke-width="1.5" opacity="0.4"/>
+          <line x1="96" y1="63" x2="98" y2="72" stroke="#F5C518" stroke-width="1.5" opacity="0.4"/>
+        </svg>
+      </div>
+      <div class="bike-body">
+        <div class="bike-name">City Cruise</div>
+        <div class="bike-tagline">Commuter urbano sin esfuerzo</div>
+        <div class="bike-specs">
+          <span class="bike-spec-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="12" height="12"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
+            700c × 35c
+          </span>
+          <span class="bike-spec-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="12" height="12"><rect x="2" y="3" width="20" height="18" rx="3"/></svg>
+            Alum. 6061
+          </span>
+          <span class="bike-spec-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="12" height="12"><path d="M12 2v20M2 12h20"/></svg>
+            11.5 kg
+          </span>
+          <span class="bike-spec-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="12" height="12"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            7 velocidades
+          </span>
+        </div>
+        <div class="bike-compat-label">Compatible con</div>
+        <div class="bike-compat-kits">
+          <span class="compat-kit-chip compat-kit-chip--eco">Eco Furia 350W</span>
+          <span class="compat-kit-chip compat-kit-chip--veloz">Veloz Titan 500W</span>
+        </div>
+        <div class="bike-price-row">
+          <div class="bike-price-block">
+            <div class="bike-desde">Desde</div>
+            <div class="bike-price">S/1,299</div>
+            <div class="bike-price-note">sin kit · financiamiento disponible</div>
+          </div>
+          <a href="/#configurador" class="bike-btn">
+            <svg viewBox="0 0 24 24" width="13" height="13"><path d="M13 2L4.5 13.5H11L10 22L20.5 10H14L13 2Z"/></svg>
+            Armar con Kit
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── TRAIL HAWK ── -->
+    <div class="bike-card bike-card--featured" data-type="montana">
+      <div class="bike-badge-popular">Más Popular</div>
+      <div class="bike-type-badge">Montaña</div>
+      <div class="bike-visual">
+        <!-- MTB SVG - wider tires, suspension fork -->
+        <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" width="200" height="136">
+          <!-- rear wheel (wider) -->
+          <circle cx="52" cy="102" r="42" fill="none" stroke="#F5C518" stroke-width="3" opacity="0.55"/>
+          <circle cx="52" cy="102" r="36" fill="none" stroke="#888" stroke-width="2"/>
+          <circle cx="52" cy="102" r="24" fill="none" stroke="#666" stroke-width="1.2"/>
+          <line x1="52" y1="60" x2="52" y2="144" stroke="#555" stroke-width="1"/>
+          <line x1="10" y1="102" x2="94" y2="102" stroke="#555" stroke-width="1"/>
+          <line x1="22" y1="72" x2="82" y2="132" stroke="#555" stroke-width="1"/>
+          <line x1="82" y1="72" x2="22" y2="132" stroke="#555" stroke-width="1"/>
+          <circle cx="52" cy="102" r="7.5" fill="#333" stroke="#444" stroke-width="2"/>
+          <!-- frame (MTB geometry) -->
+          <line x1="52" y1="102" x2="116" y2="76" stroke="#F5C518" stroke-width="3.5" stroke-linecap="round" opacity="0.85"/>
+          <line x1="116" y1="76" x2="102" y2="36" stroke="#F5C518" stroke-width="3.5" stroke-linecap="round" opacity="0.85"/>
+          <line x1="102" y1="36" x2="150" y2="40" stroke="#ddd" stroke-width="3" stroke-linecap="round"/>
+          <line x1="116" y1="76" x2="150" y2="40" stroke="#F5C518" stroke-width="3.5" stroke-linecap="round" opacity="0.85"/>
+          <line x1="102" y1="36" x2="52" y2="102" stroke="#bbb" stroke-width="2" stroke-linecap="round"/>
+          <!-- suspension fork (dual lines) -->
+          <line x1="150" y1="40" x2="162" y2="102" stroke="#bbb" stroke-width="4" stroke-linecap="round"/>
+          <line x1="155" y1="40" x2="167" y2="102" stroke="#999" stroke-width="3" stroke-linecap="round"/>
+          <!-- fork crown -->
+          <rect x="149" y="62" width="19" height="5" rx="2" fill="#777"/>
+          <!-- front wheel (wider) -->
+          <circle cx="164" cy="102" r="42" fill="none" stroke="#F5C518" stroke-width="3" opacity="0.55"/>
+          <circle cx="164" cy="102" r="36" fill="none" stroke="#888" stroke-width="2"/>
+          <circle cx="164" cy="102" r="24" fill="none" stroke="#666" stroke-width="1.2"/>
+          <line x1="164" y1="60" x2="164" y2="144" stroke="#555" stroke-width="1"/>
+          <line x1="122" y1="102" x2="206" y2="102" stroke="#555" stroke-width="1"/>
+          <line x1="134" y1="72" x2="194" y2="132" stroke="#555" stroke-width="1"/>
+          <line x1="194" y1="72" x2="134" y2="132" stroke="#555" stroke-width="1"/>
+          <circle cx="164" cy="102" r="7.5" fill="#333" stroke="#444" stroke-width="2"/>
+          <!-- saddle -->
+          <line x1="90" y1="31" x2="115" y2="31" stroke="#bbb" stroke-width="4.5" stroke-linecap="round"/>
+          <line x1="103" y1="31" x2="103" y2="44" stroke="#999" stroke-width="2.5"/>
+          <!-- handlebar (flat bar) -->
+          <line x1="150" y1="40" x2="152" y2="24" stroke="#bbb" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="140" y1="22" x2="164" y2="22" stroke="#bbb" stroke-width="5" stroke-linecap="round"/>
+          <!-- chainring -->
+          <circle cx="116" cy="76" r="13" fill="none" stroke="#F5C518" stroke-width="2.5" opacity="0.7"/>
+          <circle cx="116" cy="76" r="6" fill="#333" stroke="#555" stroke-width="1.5"/>
+          <!-- cranks -->
+          <line x1="116" y1="76" x2="126" y2="85" stroke="#888" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="116" y1="76" x2="106" y2="67" stroke="#888" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="bike-body">
+        <div class="bike-name">Trail Hawk</div>
+        <div class="bike-tagline">Para colinas y terreno exigente</div>
+        <div class="bike-specs">
+          <span class="bike-spec-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="12" height="12"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
+            29" × 2.1"
+          </span>
+          <span class="bike-spec-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="12" height="12"><rect x="2" y="3" width="20" height="18" rx="3"/></svg>
+            Alum. 7005
+          </span>
+          <span class="bike-spec-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="12" height="12"><path d="M12 2v20M2 12h20"/></svg>
+            13.2 kg
+          </span>
+          <span class="bike-spec-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="12" height="12"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            21 velocidades
+          </span>
+        </div>
+        <div class="bike-compat-label">Compatible con</div>
+        <div class="bike-compat-kits">
+          <span class="compat-kit-chip compat-kit-chip--veloz">Veloz Titan 500W</span>
+          <span class="compat-kit-chip compat-kit-chip--blitz">Blitz 1200W</span>
+        </div>
+        <div class="bike-price-row">
+          <div class="bike-price-block">
+            <div class="bike-desde">Desde</div>
+            <div class="bike-price">S/1,599</div>
+            <div class="bike-price-note">sin kit · financiamiento disponible</div>
+          </div>
+          <a href="/#configurador" class="bike-btn">
+            <svg viewBox="0 0 24 24" width="13" height="13"><path d="M13 2L4.5 13.5H11L10 22L20.5 10H14L13 2Z"/></svg>
+            Armar con Kit
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SPORT HYBRID ── -->
+    <div class="bike-card" data-type="urbana">
+      <div class="bike-type-badge">Urbana</div>
+      <div class="bike-visual">
+        <!-- Sport hybrid: drop/flat bar, thinner frame -->
+        <svg viewBox="0 0 220 145" xmlns="http://www.w3.org/2000/svg" width="200" height="132">
+          <!-- rear wheel -->
+          <circle cx="50" cy="98" r="40" fill="none" stroke="#888" stroke-width="2.5"/>
+          <circle cx="50" cy="98" r="27" fill="none" stroke="#666" stroke-width="1.2"/>
+          <line x1="50" y1="58" x2="50" y2="138" stroke="#555" stroke-width="1"/>
+          <line x1="10" y1="98" x2="90" y2="98" stroke="#555" stroke-width="1"/>
+          <line x1="21.7" y1="69.7" x2="78.3" y2="126.3" stroke="#555" stroke-width="1"/>
+          <line x1="78.3" y1="69.7" x2="21.7" y2="126.3" stroke="#555" stroke-width="1"/>
+          <circle cx="50" cy="98" r="7" fill="#444" stroke="#555" stroke-width="1.5"/>
+          <!-- frame (aggressive geometry) -->
+          <line x1="50" y1="98" x2="112" y2="68" stroke="#ddd" stroke-width="3" stroke-linecap="round"/>
+          <line x1="112" y1="68" x2="100" y2="28" stroke="#ddd" stroke-width="3" stroke-linecap="round"/>
+          <line x1="100" y1="28" x2="152" y2="38" stroke="#ccc" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="112" y1="68" x2="152" y2="38" stroke="#ddd" stroke-width="3" stroke-linecap="round"/>
+          <line x1="100" y1="28" x2="50" y2="98" stroke="#aaa" stroke-width="2" stroke-linecap="round"/>
+          <line x1="152" y1="38" x2="170" y2="98" stroke="#ccc" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- front wheel -->
+          <circle cx="170" cy="98" r="40" fill="none" stroke="#888" stroke-width="2.5"/>
+          <circle cx="170" cy="98" r="27" fill="none" stroke="#666" stroke-width="1.2"/>
+          <line x1="170" y1="58" x2="170" y2="138" stroke="#555" stroke-width="1"/>
+          <line x1="130" y1="98" x2="210" y2="98" stroke="#555" stroke-width="1"/>
+          <line x1="141.7" y1="69.7" x2="198.3" y2="126.3" stroke="#555" stroke-width="1"/>
+          <line x1="198.3" y1="69.7" x2="141.7" y2="126.3" stroke="#555" stroke-width="1"/>
+          <circle cx="170" cy="98" r="7" fill="#444" stroke="#555" stroke-width="1.5"/>
+          <!-- saddle (sleek) -->
+          <line x1="90" y1="24" x2="112" y2="24" stroke="#aaa" stroke-width="4" stroke-linecap="round"/>
+          <line x1="101" y1="24" x2="101" y2="35" stroke="#999" stroke-width="2"/>
+          <!-- drop handlebar hint -->
+          <line x1="152" y1="38" x2="155" y2="22" stroke="#aaa" stroke-width="3" stroke-linecap="round"/>
+          <path d="M148 20 Q155 17 162 22 Q165 27 159 30" fill="none" stroke="#aaa" stroke-width="3" stroke-linecap="round"/>
+          <!-- chainring -->
+          <circle cx="112" cy="68" r="11" fill="none" stroke="#888" stroke-width="2"/>
+          <circle cx="112" cy="68" r="5" fill="#555"/>
+          <line x1="112" y1="68" x2="122" y2="76" stroke="#777" stroke-width="2" stroke-linecap="round"/>
+          <line x1="112" y1="68" x2="102" y2="60" stroke="#777" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="bike-body">
+        <div class="bike-name">Sport Hybrid</div>
+        <div class="bike-tagline">Velocidad y confort equilibrados</div>
+        <div class="bike-specs">
+          <span class="bike-spec-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="12" height="12"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
+            700c × 28c
+          </span>
+          <span class="bike-spec-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="12" height="12"><rect x="2" y="3" width="20" height="18" rx="3"/></svg>
+            Cromoly
+          </span>
+          <span class="bike-spec-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="12" height="12"><path d="M12 2v20M2 12h20"/></svg>
+            11.0 kg
+          </span>
+          <span class="bike-spec-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="12" height="12"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            8 velocidades
+          </span>
+        </div>
+        <div class="bike-compat-label">Compatible con</div>
+        <div class="bike-compat-kits">
+          <span class="compat-kit-chip compat-kit-chip--eco">Eco Furia 350W</span>
+          <span class="compat-kit-chip compat-kit-chip--veloz">Veloz Titan 500W</span>
+        </div>
+        <div class="bike-price-row">
+          <div class="bike-price-block">
+            <div class="bike-desde">Desde</div>
+            <div class="bike-price">S/1,499</div>
+            <div class="bike-price-note">sin kit · financiamiento disponible</div>
+          </div>
+          <a href="/#configurador" class="bike-btn">
+            <svg viewBox="0 0 24 24" width="13" height="13"><path d="M13 2L4.5 13.5H11L10 22L20.5 10H14L13 2Z"/></svg>
+            Armar con Kit
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── CARGO TITAN ── -->
+    <div class="bike-card" data-type="cargo">
+      <div class="bike-type-badge">Cargo</div>
+      <div class="bike-visual">
+        <!-- Cargo bike: longer frame, rear rack -->
+        <svg viewBox="0 0 240 145" xmlns="http://www.w3.org/2000/svg" width="220" height="132">
+          <!-- rear wheel (smaller) -->
+          <circle cx="42" cy="100" r="36" fill="none" stroke="#888" stroke-width="2.5"/>
+          <circle cx="42" cy="100" r="24" fill="none" stroke="#666" stroke-width="1.2"/>
+          <line x1="42" y1="64" x2="42" y2="136" stroke="#555" stroke-width="1"/>
+          <line x1="6" y1="100" x2="78" y2="100" stroke="#555" stroke-width="1"/>
+          <line x1="16.6" y1="74.6" x2="67.4" y2="125.4" stroke="#555" stroke-width="1"/>
+          <line x1="67.4" y1="74.6" x2="16.6" y2="125.4" stroke="#555" stroke-width="1"/>
+          <circle cx="42" cy="100" r="6" fill="#444" stroke="#555" stroke-width="1.5"/>
+          <!-- long frame -->
+          <line x1="42" y1="100" x2="132" y2="76" stroke="#ccc" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="132" y1="76" x2="118" y2="38" stroke="#ccc" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="118" y1="38" x2="170" y2="44" stroke="#bbb" stroke-width="3" stroke-linecap="round"/>
+          <line x1="132" y1="76" x2="170" y2="44" stroke="#ccc" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="118" y1="38" x2="42" y2="100" stroke="#aaa" stroke-width="2" stroke-linecap="round"/>
+          <line x1="170" y1="44" x2="196" y2="100" stroke="#bbb" stroke-width="3" stroke-linecap="round"/>
+          <!-- front wheel -->
+          <circle cx="196" cy="100" r="36" fill="none" stroke="#888" stroke-width="2.5"/>
+          <circle cx="196" cy="100" r="24" fill="none" stroke="#666" stroke-width="1.2"/>
+          <line x1="196" y1="64" x2="196" y2="136" stroke="#555" stroke-width="1"/>
+          <line x1="160" y1="100" x2="232" y2="100" stroke="#555" stroke-width="1"/>
+          <line x1="170.6" y1="74.6" x2="221.4" y2="125.4" stroke="#555" stroke-width="1"/>
+          <line x1="221.4" y1="74.6" x2="170.6" y2="125.4" stroke="#555" stroke-width="1"/>
+          <circle cx="196" cy="100" r="6" fill="#444" stroke="#555" stroke-width="1.5"/>
+          <!-- rear cargo rack (prominent) -->
+          <rect x="54" y="60" width="64" height="8" rx="3" fill="none" stroke="#F5C518" stroke-width="2.5" opacity="0.7"/>
+          <line x1="60" y1="68" x2="58" y2="80" stroke="#F5C518" stroke-width="2" opacity="0.5"/>
+          <line x1="112" y1="68" x2="114" y2="80" stroke="#F5C518" stroke-width="2" opacity="0.5"/>
+          <line x1="56" y1="60" x2="56" y2="64" stroke="#F5C518" stroke-width="1.5" opacity="0.4"/>
+          <line x1="116" y1="60" x2="116" y2="64" stroke="#F5C518" stroke-width="1.5" opacity="0.4"/>
+          <!-- saddle -->
+          <line x1="107" y1="33" x2="130" y2="33" stroke="#aaa" stroke-width="4" stroke-linecap="round"/>
+          <line x1="119" y1="33" x2="119" y2="45" stroke="#999" stroke-width="2"/>
+          <!-- handlebar -->
+          <line x1="170" y1="44" x2="172" y2="28" stroke="#aaa" stroke-width="3" stroke-linecap="round"/>
+          <line x1="164" y1="26" x2="180" y2="26" stroke="#aaa" stroke-width="4.5" stroke-linecap="round"/>
+          <!-- chainring -->
+          <circle cx="132" cy="76" r="11" fill="none" stroke="#888" stroke-width="2"/>
+          <circle cx="132" cy="76" r="5" fill="#555"/>
+          <line x1="132" y1="76" x2="140" y2="84" stroke="#777" stroke-width="2" stroke-linecap="round"/>
+          <line x1="132" y1="76" x2="124" y2="68" stroke="#777" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="bike-body">
+        <div class="bike-name">Cargo Titan</div>
+        <div class="bike-tagline">Para carga, delivery y trabajo</div>
+        <div class="bike-specs">
+          <span class="bike-spec-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="12" height="12"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
+            26" × 1.95"
+          </span>
+          <span class="bike-spec-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="12" height="12"><rect x="2" y="3" width="20" height="18" rx="3"/></svg>
+            Acero reforzado
+          </span>
+          <span class="bike-spec-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="12" height="12"><path d="M12 2v20M2 12h20"/></svg>
+            18.5 kg
+          </span>
+          <span class="bike-spec-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="12" height="12"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/></svg>
+            Rack 80 kg
+          </span>
+        </div>
+        <div class="bike-compat-label">Compatible con</div>
+        <div class="bike-compat-kits">
+          <span class="compat-kit-chip compat-kit-chip--eco">Eco Furia 350W</span>
+          <span class="compat-kit-chip compat-kit-chip--veloz">Veloz Titan 500W</span>
+          <span class="compat-kit-chip compat-kit-chip--blitz">Blitz 1200W</span>
+        </div>
+        <div class="bike-price-row">
+          <div class="bike-price-block">
+            <div class="bike-desde">Desde</div>
+            <div class="bike-price">S/1,899</div>
+            <div class="bike-price-note">sin kit · financiamiento disponible</div>
+          </div>
+          <a href="/#configurador" class="bike-btn">
+            <svg viewBox="0 0 24 24" width="13" height="13"><path d="M13 2L4.5 13.5H11L10 22L20.5 10H14L13 2Z"/></svg>
+            Armar con Kit
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── FOLD EXPRESS ── -->
+    <div class="bike-card" data-type="plegable">
+      <div class="bike-type-badge">Plegable</div>
+      <div class="bike-visual">
+        <!-- Folding bike: small wheels, folding joint -->
+        <svg viewBox="0 0 200 145" xmlns="http://www.w3.org/2000/svg" width="180" height="132">
+          <!-- rear wheel (20") -->
+          <circle cx="50" cy="105" r="32" fill="none" stroke="#888" stroke-width="2.5"/>
+          <circle cx="50" cy="105" r="21" fill="none" stroke="#666" stroke-width="1.2"/>
+          <line x1="50" y1="73" x2="50" y2="137" stroke="#555" stroke-width="1"/>
+          <line x1="18" y1="105" x2="82" y2="105" stroke="#555" stroke-width="1"/>
+          <line x1="27.4" y1="82.4" x2="72.6" y2="127.6" stroke="#555" stroke-width="1"/>
+          <line x1="72.6" y1="82.4" x2="27.4" y2="127.6" stroke="#555" stroke-width="1"/>
+          <circle cx="50" cy="105" r="6" fill="#444" stroke="#555" stroke-width="1.5"/>
+          <!-- frame with fold joint -->
+          <line x1="50" y1="105" x2="100" y2="88" stroke="#ccc" stroke-width="3" stroke-linecap="round"/>
+          <!-- fold joint indicator -->
+          <circle cx="100" cy="88" r="5" fill="none" stroke="#F5C518" stroke-width="2" opacity="0.8"/>
+          <line x1="100" y1="88" x2="100" y2="52" stroke="#ccc" stroke-width="3" stroke-linecap="round"/>
+          <line x1="100" y1="52" x2="140" y2="58" stroke="#bbb" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="100" y1="88" x2="140" y2="58" stroke="#ccc" stroke-width="3" stroke-linecap="round"/>
+          <line x1="100" y1="52" x2="50" y2="105" stroke="#aaa" stroke-width="2" stroke-linecap="round"/>
+          <line x1="140" y1="58" x2="152" y2="105" stroke="#bbb" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- front wheel (20") -->
+          <circle cx="152" cy="105" r="32" fill="none" stroke="#888" stroke-width="2.5"/>
+          <circle cx="152" cy="105" r="21" fill="none" stroke="#666" stroke-width="1.2"/>
+          <line x1="152" y1="73" x2="152" y2="137" stroke="#555" stroke-width="1"/>
+          <line x1="120" y1="105" x2="184" y2="105" stroke="#555" stroke-width="1"/>
+          <line x1="129.4" y1="82.4" x2="174.6" y2="127.6" stroke="#555" stroke-width="1"/>
+          <line x1="174.6" y1="82.4" x2="129.4" y2="127.6" stroke="#555" stroke-width="1"/>
+          <circle cx="152" cy="105" r="6" fill="#444" stroke="#555" stroke-width="1.5"/>
+          <!-- saddle (telescoping post) -->
+          <line x1="93" y1="47" x2="108" y2="47" stroke="#aaa" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="100" y1="47" x2="100" y2="60" stroke="#999" stroke-width="2"/>
+          <!-- handlebar (folding) -->
+          <line x1="140" y1="58" x2="142" y2="42" stroke="#aaa" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="142" cy="38" r="4" fill="none" stroke="#F5C518" stroke-width="1.8" opacity="0.8"/>
+          <line x1="134" y1="36" x2="150" y2="36" stroke="#aaa" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- chainring (small) -->
+          <circle cx="100" cy="88" r="9" fill="none" stroke="#888" stroke-width="1.8"/>
+          <circle cx="100" cy="88" r="4" fill="#555"/>
+        </svg>
+      </div>
+      <div class="bike-body">
+        <div class="bike-name">Fold Express</div>
+        <div class="bike-tagline">Llévala en el metro, bus o auto</div>
+        <div class="bike-specs">
+          <span class="bike-spec-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="12" height="12"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
+            20" × 1.75"
+          </span>
+          <span class="bike-spec-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="12" height="12"><rect x="2" y="3" width="20" height="18" rx="3"/></svg>
+            Alum. 6061
+          </span>
+          <span class="bike-spec-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="12" height="12"><path d="M12 2v20M2 12h20"/></svg>
+            12.0 kg
+          </span>
+          <span class="bike-spec-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="12" height="12"><path d="M5 12H19M12 5l7 7-7 7"/></svg>
+            Plegado en 10s
+          </span>
+        </div>
+        <div class="bike-compat-label">Compatible con</div>
+        <div class="bike-compat-kits">
+          <span class="compat-kit-chip compat-kit-chip--eco">Eco Furia 350W</span>
+        </div>
+        <div class="bike-price-row">
+          <div class="bike-price-block">
+            <div class="bike-desde">Desde</div>
+            <div class="bike-price">S/1,199</div>
+            <div class="bike-price-note">sin kit · financiamiento disponible</div>
+          </div>
+          <a href="/#configurador" class="bike-btn">
+            <svg viewBox="0 0 24 24" width="13" height="13"><path d="M13 2L4.5 13.5H11L10 22L20.5 10H14L13 2Z"/></svg>
+            Armar con Kit
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── FAT STORM ── -->
+    <div class="bike-card" data-type="montana">
+      <div class="bike-type-badge">Montaña</div>
+      <div class="bike-visual">
+        <!-- Fat bike: very wide tires -->
+        <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" width="200" height="136">
+          <!-- rear wheel (fat) -->
+          <circle cx="52" cy="100" r="44" fill="none" stroke="#888" stroke-width="5" opacity="0.9"/>
+          <circle cx="52" cy="100" r="38" fill="none" stroke="#777" stroke-width="2"/>
+          <circle cx="52" cy="100" r="26" fill="none" stroke="#666" stroke-width="1.2"/>
+          <line x1="52" y1="56" x2="52" y2="144" stroke="#555" stroke-width="1"/>
+          <line x1="8" y1="100" x2="96" y2="100" stroke="#555" stroke-width="1"/>
+          <line x1="20.8" y1="68.8" x2="83.2" y2="131.2" stroke="#555" stroke-width="1"/>
+          <line x1="83.2" y1="68.8" x2="20.8" y2="131.2" stroke="#555" stroke-width="1"/>
+          <circle cx="52" cy="100" r="8" fill="#333" stroke="#444" stroke-width="2"/>
+          <!-- frame -->
+          <line x1="52" y1="100" x2="114" y2="72" stroke="#ddd" stroke-width="4" stroke-linecap="round"/>
+          <line x1="114" y1="72" x2="100" y2="30" stroke="#ddd" stroke-width="4" stroke-linecap="round"/>
+          <line x1="100" y1="30" x2="152" y2="36" stroke="#ccc" stroke-width="3" stroke-linecap="round"/>
+          <line x1="114" y1="72" x2="152" y2="36" stroke="#ddd" stroke-width="4" stroke-linecap="round"/>
+          <line x1="100" y1="30" x2="52" y2="100" stroke="#bbb" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="152" y1="36" x2="168" y2="100" stroke="#ccc" stroke-width="3" stroke-linecap="round"/>
+          <!-- front wheel (fat) -->
+          <circle cx="168" cy="100" r="44" fill="none" stroke="#888" stroke-width="5" opacity="0.9"/>
+          <circle cx="168" cy="100" r="38" fill="none" stroke="#777" stroke-width="2"/>
+          <circle cx="168" cy="100" r="26" fill="none" stroke="#666" stroke-width="1.2"/>
+          <line x1="168" y1="56" x2="168" y2="144" stroke="#555" stroke-width="1"/>
+          <line x1="124" y1="100" x2="212" y2="100" stroke="#555" stroke-width="1"/>
+          <line x1="136.8" y1="68.8" x2="199.2" y2="131.2" stroke="#555" stroke-width="1"/>
+          <line x1="199.2" y1="68.8" x2="136.8" y2="131.2" stroke="#555" stroke-width="1"/>
+          <circle cx="168" cy="100" r="8" fill="#333" stroke="#444" stroke-width="2"/>
+          <!-- saddle -->
+          <line x1="88" y1="25" x2="114" y2="25" stroke="#bbb" stroke-width="4.5" stroke-linecap="round"/>
+          <line x1="101" y1="25" x2="101" y2="38" stroke="#999" stroke-width="2.5"/>
+          <!-- flat handlebar wide -->
+          <line x1="152" y1="36" x2="154" y2="20" stroke="#bbb" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="138" y1="18" x2="170" y2="18" stroke="#bbb" stroke-width="5" stroke-linecap="round"/>
+          <!-- chainring (large) -->
+          <circle cx="114" cy="72" r="14" fill="none" stroke="#888" stroke-width="2.5"/>
+          <circle cx="114" cy="72" r="6" fill="#444" stroke="#555" stroke-width="1.5"/>
+          <line x1="114" y1="72" x2="124" y2="82" stroke="#888" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="114" y1="72" x2="104" y2="62" stroke="#888" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="bike-body">
+        <div class="bike-name">Fat Storm</div>
+        <div class="bike-tagline">Arena, barro, adoquín: todo terreno</div>
+        <div class="bike-specs">
+          <span class="bike-spec-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="12" height="12"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
+            26" × 4.0"
+          </span>
+          <span class="bike-spec-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="12" height="12"><rect x="2" y="3" width="20" height="18" rx="3"/></svg>
+            Alum. 6061
+          </span>
+          <span class="bike-spec-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="12" height="12"><path d="M12 2v20M2 12h20"/></svg>
+            15.8 kg
+          </span>
+          <span class="bike-spec-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="12" height="12"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            9 velocidades
+          </span>
+        </div>
+        <div class="bike-compat-label">Compatible con</div>
+        <div class="bike-compat-kits">
+          <span class="compat-kit-chip compat-kit-chip--veloz">Veloz Titan 500W</span>
+          <span class="compat-kit-chip compat-kit-chip--blitz">Blitz 1200W</span>
+        </div>
+        <div class="bike-price-row">
+          <div class="bike-price-block">
+            <div class="bike-desde">Desde</div>
+            <div class="bike-price">S/1,799</div>
+            <div class="bike-price-note">sin kit · financiamiento disponible</div>
+          </div>
+          <a href="/#configurador" class="bike-btn">
+            <svg viewBox="0 0 24 24" width="13" height="13"><path d="M13 2L4.5 13.5H11L10 22L20.5 10H14L13 2Z"/></svg>
+            Armar con Kit
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /catalog-grid -->
+</section>
+
+
+<!-- ══════════════════════════════════════
+     COMPAT BANNER
+══════════════════════════════════════ -->
+<section class="compat-banner">
+  <div class="compat-banner-inner">
+    <div>
+      <span class="section-badge" style="margin-bottom:20px; display:inline-flex;">
+        <svg viewBox="0 0 24 24" width="13" height="13" fill="#b8890a"><path d="M13 2L4.5 13.5H11L10 22L20.5 10H14L13 2Z"/></svg>
+        Arma tu combo perfecto
+      </span>
+      <h2 class="compat-banner-title">ELIGE TU BICI Y<br><span>POTENCIA CON UN KIT RUDRA</span></h2>
+      <p class="compat-banner-desc">
+        Cada bicicleta del catálogo está diseñada para recibir un kit de conversión Rudra sin modificaciones estructurales. Nuestro equipo verifica la compatibilidad antes de la entrega y hace la instalación en tu domicilio.
+      </p>
+      <a href="/contacto/" class="btn-primary" style="width:fit-content;">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+        Consultar combo ideal
+      </a>
+    </div>
+    <div class="kit-links">
+      <a href="/#kits" class="kit-link-row">
+        <div class="klr-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#F5C518" stroke-width="1.8" width="20" height="20"><path d="M13 2L4.5 13.5H11L10 22L20.5 10H14L13 2Z"/></svg>
+        </div>
+        <div class="klr-info">
+          <div class="klr-name">Eco Furia</div>
+          <div class="klr-spec">350W · 30km/h · urbano</div>
+        </div>
+        <div class="klr-price">S/1,499</div>
+        <div class="klr-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+      <a href="/#kits" class="kit-link-row">
+        <div class="klr-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#F5C518" stroke-width="1.8" width="20" height="20"><path d="M12 2L8 10H2l5 5-2 8 7-4 7 4-2-8 5-5h-6L12 2z"/></svg>
+        </div>
+        <div class="klr-info">
+          <div class="klr-name">Veloz Titan</div>
+          <div class="klr-spec">500W · 40km/h · colinas</div>
+        </div>
+        <div class="klr-price">S/1,899</div>
+        <div class="klr-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+      <a href="/#kits" class="kit-link-row">
+        <div class="klr-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#F5C518" stroke-width="1.8" width="20" height="20"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div class="klr-info">
+          <div class="klr-name">Blitz</div>
+          <div class="klr-spec">1200W · 55km/h · extremo</div>
+        </div>
+        <div class="klr-price">S/2,699</div>
+        <div class="klr-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-main">
+
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="#F5C518"><path d="M13 2L4.5 13.5H11L10 22L20.5 10H14L13 2Z"/></svg>
+        <span>RUDRA KITS</span>
+      </div>
+      <p class="footer-brand-desc">Transformamos tu bicicleta en una máquina eléctrica. Kits de conversión premium con tecnología de punta y componentes de primera calidad.</p>
+      <div class="footer-socials">
+        <a href="#" class="footer-social" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="#" class="footer-social" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="#" class="footer-social" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+        <a href="#" class="footer-social" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-col-title">KITS</div>
+      <ul class="footer-links">
+        <li><a href="/#kits">Eco Furia 350W</a></li>
+        <li><a href="/#kits">Veloz Titan 500W</a></li>
+        <li><a href="/#kits">Blitz 1200W</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-col-title">NAVEGACIÓN</div>
+      <ul class="footer-links">
+        <li><a href="/">Kits de Conversión</a></li>
+        <li><a href="/bicicletas/">Bicicletas</a></li>
+        <li><a href="/baterias/">Baterías de Litio</a></li>
+        <li><a href="/contacto/">Contacto</a></li>
+        <li><a href="/terminos/">Términos y Condiciones</a></li>
+        <li><a href="/privacidad/">Política de Privacidad</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-col-title">CONTACTO</div>
+      <ul class="footer-contact">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#F5A800" stroke-width="1.8" width="15" height="15"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Calle Dos de Mayo 543, Lima, Perú
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#F5A800" stroke-width="1.8" width="15" height="15"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 9.78 19.79 19.79 0 01.67 1.16 2 2 0 012.66 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.64a16 16 0 006.29 6.29l1-1a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          +51 999 999 999
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#F5A800" stroke-width="1.8" width="15" height="15"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          hola@rudrakitsperu.com
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#F5A800" stroke-width="1.8" width="15" height="15"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Lun-Sáb: 9am – 7pm
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Rudra Kits Peru. Todos los derechos reservados.</span>
+    <div class="footer-legal">
+      <a href="/terminos/">Términos</a>
+      <a href="/privacidad/">Privacidad</a>
+      <a href="/terminos/#cookies">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var filterBtns = document.querySelectorAll('.filter-btn');
+  var cards = document.querySelectorAll('.bike-card');
+
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var filter = btn.getAttribute('data-filter');
+
+      filterBtns.forEach(function (b) { b.classList.remove('filter-btn--active'); });
+      btn.classList.add('filter-btn--active');
+
+      cards.forEach(function (card) {
+        if (filter === 'all' || card.getAttribute('data-type') === filter) {
+          card.classList.remove('bike-card--hidden');
+        } else {
+          card.classList.add('bike-card--hidden');
+        }
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
