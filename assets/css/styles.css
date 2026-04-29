@@ -997,8 +997,8 @@ nav {
 }
 .video-modal-close {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 16px;
+  right: 16px;
   z-index: 2;
   background: rgba(0,0,0,0.6);
   border: 1px solid rgba(255,255,255,0.15);
