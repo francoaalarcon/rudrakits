@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Huella Agencia Digital — Agencia especializada en eCommerce. Impulsamos marcas ambiciosas con UX y alta tecnología.">
+  <title>Huella Agencia Digital</title>
+
+  <!-- Fuente principal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=TASA+Orbiter:wght@400..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Estilos para scroll reveal -->
+  <style>
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    [data-reveal].is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    [data-reveal][data-delay="1"] { transition-delay: 0.1s; }
+    [data-reveal][data-delay="2"] { transition-delay: 0.2s; }
+    [data-reveal][data-delay="3"] { transition-delay: 0.3s; }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════
+       HEADER / NAVEGACIÓN
+  ══════════════════════════════════════════════════════ -->
+  <header>
+    <div class="nav-bar">
+      <a href="/" class="nav-brand">
+        <img src="assets/LOGO-1.webp" alt="Huella" class="nav-brand-img">
+        <div class="nav-brand-tagline">
+          <strong>Huella</strong>
+          <span>Agencia Digital</span>
+        </div>
+      </a>
+      <a href="#contacto" class="nav-cta">Contacto</a>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════════ -->
+  <main>
+    <section class="hero">
+
+      <!-- Palabra WORK animada (derecha, vertical, sube lento) -->
+      <div class="hero-work-word" aria-hidden="true">WORK</div>
+
+      <!-- Círculo decorativo lima (esquina superior derecha) -->
+      <div class="hero-dot" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero-inner">
+
+          <div class="hero-eyebrow" data-reveal>
+            Expertos en eCommerce
+          </div>
+
+          <h1 class="hero-title" data-reveal data-delay="1">
+            Impulsamos marcas<br>
+            ambiciosas a escalar<br>
+            sus resultados
+          </h1>
+
+          <p class="hero-body" data-reveal data-delay="2">
+            Agencia especializada en eCommerce enfocada en brindar soluciones
+            escalables basadas en UX y alta tecnología.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         TICKER
+    ══════════════════════════════════════════════════ -->
+    <div class="ticker-wrapper" aria-hidden="true">
+      <div class="ticker-track">
+        <span class="ticker-item">eCommerce <span class="ticker-dot"></span></span>
+        <span class="ticker-item">UX Design <span class="ticker-dot"></span></span>
+        <span class="ticker-item">Shopify <span class="ticker-dot"></span></span>
+        <span class="ticker-item">VTEX <span class="ticker-dot"></span></span>
+        <span class="ticker-item">SEO &amp; SEM <span class="ticker-dot"></span></span>
+        <span class="ticker-item">Performance <span class="ticker-dot"></span></span>
+        <span class="ticker-item">Conversión <span class="ticker-dot"></span></span>
+        <span class="ticker-item">Growth <span class="ticker-dot"></span></span>
+        <span class="ticker-item">Analytics <span class="ticker-dot"></span></span>
+        <span class="ticker-item">eCommerce <span class="ticker-dot"></span></span>
+        <span class="ticker-item">UX Design <span class="ticker-dot"></span></span>
+        <span class="ticker-item">Shopify <span class="ticker-dot"></span></span>
+        <span class="ticker-item">VTEX <span class="ticker-dot"></span></span>
+        <span class="ticker-item">SEO &amp; SEM <span class="ticker-dot"></span></span>
+        <span class="ticker-item">Performance <span class="ticker-dot"></span></span>
+        <span class="ticker-item">Conversión <span class="ticker-dot"></span></span>
+        <span class="ticker-item">Growth <span class="ticker-dot"></span></span>
+        <span class="ticker-item">Analytics <span class="ticker-dot"></span></span>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         PORTFOLIO — FILA 1 (3 proyectos)
+    ══════════════════════════════════════════════════ -->
+    <section class="portfolio-section">
+      <div class="container">
+        <div class="portfolio-grid" data-reveal>
+
+          <!-- Card 1 -->
+          <article class="portfolio-card">
+            <div class="portfolio-card-media">
+              <div class="portfolio-card-media-inner">
+                <div class="portfolio-card-img" style="background-image: url(assets/dona.png); width:100%; height:100%; background-size:cover; background-position:center; transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94);"></div>
+                <div class="portfolio-card-tags">
+                  <span class="portfolio-tag">Implementación</span>
+                  <span class="portfolio-tag">SEO</span>
+                  <span class="portfolio-tag">SEM</span>
+                </div>
+              </div>
+              <div class="portfolio-card-date"><span>06/2024</span></div>
+            </div>
+            <h3 class="portfolio-card-title">Donna Cattiva</h3>
+            <p class="portfolio-card-desc">El rediseño combina elegancia y funcionalidad, destacando la versatilidad de sus productos para mujeres que dejan huella.</p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="portfolio-card">
+            <div class="portfolio-card-media">
+              <div class="portfolio-card-media-inner">
+                <div class="portfolio-card-img" style="background-image: url(assets/dona.png); width:100%; height:100%; background-size:cover; background-position:center; transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94);"></div>
+                <div class="portfolio-card-tags">
+                  <span class="portfolio-tag">Shopify</span>
+                  <span class="portfolio-tag">UX</span>
+                </div>
+              </div>
+              <div class="portfolio-card-date"><span>05/2024</span></div>
+            </div>
+            <h3 class="portfolio-card-title">Roxana Pardo</h3>
+            <p class="portfolio-card-desc">Tienda de moda con enfoque en experiencia de usuario y conversión optimizada para el canal digital.</p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="portfolio-card">
+            <div class="portfolio-card-media">
+              <div class="portfolio-card-media-inner">
+                <div class="portfolio-card-img" style="background-image: url(assets/dona.png); width:100%; height:100%; background-size:cover; background-position:center; transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94);"></div>
+                <div class="portfolio-card-tags">
+                  <span class="portfolio-tag">VTEX</span>
+                  <span class="portfolio-tag">Performance</span>
+                </div>
+              </div>
+              <div class="portfolio-card-date"><span>07/2022</span></div>
+            </div>
+            <h3 class="portfolio-card-title">Magitech</h3>
+            <p class="portfolio-card-desc">Plataforma de tecnología con arquitectura escalable y estrategia de performance marketing.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         PORTFOLIO — FILA 2 (4 proyectos, más compactos)
+    ══════════════════════════════════════════════════ -->
+    <section class="portfolio-section">
+      <div class="container">
+        <div class="portfolio-grid grid-4" data-reveal>
+
+          <article class="portfolio-card">
+            <div class="portfolio-card-media">
+              <div class="portfolio-card-img" style="background-image: url(assets/dona.png); width:100%; height:100%; background-size:cover; background-position:center;"></div>
+              <div class="portfolio-card-tags">
+                <span class="portfolio-tag">Shopify</span>
+              </div>
+            </div>
+            <h3 class="portfolio-card-title">Origens</h3>
+            <p class="portfolio-card-desc">Marca de origen con identidad sólida y tienda Shopify optimizada.</p>
+          </article>
+
+          <article class="portfolio-card">
+            <div class="portfolio-card-media">
+              <div class="portfolio-card-img" style="background-image: url(assets/dona.png); width:100%; height:100%; background-size:cover; background-position:center;"></div>
+              <div class="portfolio-card-tags">
+                <span class="portfolio-tag">SEO</span>
+              </div>
+            </div>
+            <h3 class="portfolio-card-title">Cinco AM</h3>
+            <p class="portfolio-card-desc">Posicionamiento orgánico y estrategia de contenido para eCommerce.</p>
+          </article>
+
+          <article class="portfolio-card">
+            <div class="portfolio-card-media">
+              <div class="portfolio-card-img" style="background-image: url(assets/dona.png); width:100%; height:100%; background-size:cover; background-position:center;"></div>
+              <div class="portfolio-card-tags">
+                <span class="portfolio-tag">VTEX</span>
+              </div>
+            </div>
+            <h3 class="portfolio-card-title">Grupo DJJ</h3>
+            <p class="portfolio-card-desc">Implementación VTEX con integraciones personalizadas para catálogo amplio.</p>
+          </article>
+
+          <article class="portfolio-card">
+            <div class="portfolio-card-media">
+              <div class="portfolio-card-img" style="background-image: url(assets/dona.png); width:100%; height:100%; background-size:cover; background-position:center;"></div>
+              <div class="portfolio-card-tags">
+                <span class="portfolio-tag">SEM</span>
+              </div>
+            </div>
+            <h3 class="portfolio-card-title">RGM</h3>
+            <p class="portfolio-card-desc">Campañas de paid media con retorno optimizado mes a mes.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         STATEMENT / CITA
+    ══════════════════════════════════════════════════ -->
+    <section class="statement-section">
+      <div class="container">
+        <p class="statement-text" data-reveal>
+          Creemos que cada negocio, sin importar su tamaño, tiene el potencial de
+          <strong class="statement-highlight">crecer en línea.</strong>
+          Nos enfocamos en ofrecer las estrategias y la tecnología necesarias para
+          asegurar su éxito en el mundo digital.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         LOGOS DE CLIENTES (grid estático)
+    ══════════════════════════════════════════════════ -->
+    <section class="clients-logo-section">
+      <div class="container">
+        <p class="section-label" data-reveal>Marcas que confían en nosotros</p>
+        <div class="clients-logo-grid" data-reveal data-delay="1">
+          <div class="client-logo-cell"><img src="assets/logo-porta.png" alt="Porta" loading="lazy"></div>
+          <div class="client-logo-cell"><img src="assets/logo-porta.png" alt="Cliente 2" loading="lazy"></div>
+          <div class="client-logo-cell"><img src="assets/logo-porta.png" alt="Cliente 3" loading="lazy"></div>
+          <div class="client-logo-cell"><img src="assets/logo-porta.png" alt="Cliente 4" loading="lazy"></div>
+          <div class="client-logo-cell"><img src="assets/logo-porta.png" alt="Cliente 5" loading="lazy"></div>
+          <div class="client-logo-cell"><img src="assets/logo-porta.png" alt="Cliente 6" loading="lazy"></div>
+          <div class="client-logo-cell"><img src="assets/logo-porta.png" alt="Cliente 7" loading="lazy"></div>
+          <div class="client-logo-cell"><img src="assets/logo-porta.png" alt="Cliente 8" loading="lazy"></div>
+          <div class="client-logo-cell"><img src="assets/logo-porta.png" alt="Cliente 9" loading="lazy"></div>
+          <div class="client-logo-cell"><img src="assets/logo-porta.png" alt="Cliente 10" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         CLIENTES INTERACTIVOS
+    ══════════════════════════════════════════════════ -->
+    <section class="clients-interactive-section">
+      <div class="container">
+
+        <p class="section-label" data-reveal>Nuestros clientes</p>
+        <h2 class="section-title" data-reveal data-delay="1">
+          Creamos relaciones únicas<br>que perduran en el tiempo
+        </h2>
+
+        <div class="clients-layout">
+
+          <!-- Columna izquierda: preview sticky -->
+          <div class="preview-col">
+            <div class="preview-wrap">
+              <div class="preview-default" id="preview-default">
+                <div class="dot-grid"></div>
+                <h2>Proyectos</h2>
+                <p>Pasa el cursor sobre un cliente</p>
+              </div>
+              <!-- Las tarjetas de preview se inyectan desde clients.js -->
+            </div>
+          </div>
+
+          <!-- Columna derecha: lista de clientes -->
+          <div class="list-col">
+            <div class="list-header">
+              <span>Cliente</span>
+              <span>Año</span>
+            </div>
+            <div class="client-list" id="client-list">
+              <!-- Las filas se inyectan desde clients.js -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         PARTNERS
+    ══════════════════════════════════════════════════ -->
+    <section class="partners-section">
+      <div class="container">
+
+        <div class="partners-header" data-reveal>
+          <h2 class="partners-title">Nuestros Aliados<br>&amp; Partners</h2>
+          <p class="partners-desc">
+            Trabajamos con plataformas líderes para impulsar y optimizar los resultados de
+            nuestros clientes, utilizando tecnología avanzada y estrategias personalizadas
+            que garantizan un crecimiento sostenible y medible.
+          </p>
+        </div>
+
+        <div class="partners-grid" id="partners-grid" data-reveal data-delay="1">
+          <!-- Las celdas se inyectan desde partners.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         SERVICIOS — Estrategia + Tecnología
+    ══════════════════════════════════════════════════ -->
+    <section class="services-section">
+      <div class="container">
+
+        <div class="services-intro" data-reveal>
+          <h2 class="services-main-title">Estrategia + Tecnología = Resultados</h2>
+          <p class="services-main-desc">
+            En Huella, impulsamos el crecimiento de negocios eCommerce con soluciones
+            digitales integrales y soporte tecnológico, ayudando a las empresas a alcanzar
+            sus objetivos y destacar en el entorno digital.
+          </p>
+        </div>
+
+        <div class="services-cards" data-reveal data-delay="1">
+
+          <!-- Card 1: e-Growth Partner -->
+          <div class="service-card service-card--growth">
+            <div class="service-card-diagram" id="diagram-growth">
+              <!-- Nodos del diagrama -->
+              <div class="scd-node scd-node--center">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="14" cy="14" r="13" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="14" cy="14" r="7" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="14" cy="14" r="2" fill="currentColor"/>
+                  <path d="M14 1v4M14 23v4M1 14h4M23 14h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="scd-node scd-node--top-left">Posicionamiento (SEO)</div>
+              <div class="scd-node scd-node--top-right">Estrategia Digital</div>
+              <div class="scd-node scd-node--mid-left">Diseño UX/UI</div>
+              <div class="scd-node scd-node--bot-right">Analítica eCommerce</div>
+              <div class="scd-node scd-node--bot-left">Optimizaciones (CRO)</div>
+              <!-- SVG de líneas curvas -->
+              <svg class="scd-lines" viewBox="0 0 500 380" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M250 190 C210 160, 160 130, 100 115" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+                <path d="M250 190 C280 155, 330 125, 380 120" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+                <path d="M250 190 C210 190, 160 190, 105 190" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+                <path d="M250 190 C290 230, 340 260, 385 265" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+                <path d="M250 190 C210 240, 155 270, 100 275" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+              </svg>
+            </div>
+            <div class="service-card-info">
+              <h3 class="service-card-title">e-Growth Partner</h3>
+              <p class="service-card-desc">
+                eCommerce Growth Partner es nuestra propuesta integral para potenciar el
+                crecimiento eCommerce. Nos enfocamos en crear estrategias personalizadas que
+                optimizan cada aspecto del negocio online, impulsando el rendimiento y
+                asegurando un escalamiento constante.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2: e-Tech Partner -->
+          <div class="service-card service-card--tech">
+            <div class="service-card-diagram" id="diagram-tech">
+              <div class="scd-node scd-node--center scd-node--tech-center">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="14" cy="14" r="13" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="14" cy="14" r="7" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="14" cy="14" r="2" fill="currentColor"/>
+                  <path d="M14 1v4M14 23v4M1 14h4M23 14h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="scd-node scd-node--top-left">Implementación</div>
+              <div class="scd-node scd-node--top-right">Integraciones</div>
+              <div class="scd-node scd-node--mid-left">Soporte</div>
+              <div class="scd-node scd-node--bot-right">Gestión de Tienda</div>
+              <div class="scd-node scd-node--bot-left">Automatizaciones</div>
+              <svg class="scd-lines" viewBox="0 0 500 380" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M250 190 C210 160, 160 130, 100 115" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+                <path d="M250 190 C280 155, 330 125, 380 120" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+                <path d="M250 190 C210 190, 160 190, 105 190" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+                <path d="M250 190 C290 230, 340 260, 385 265" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+                <path d="M250 190 C210 240, 155 270, 100 275" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+              </svg>
+            </div>
+            <div class="service-card-info">
+              <h3 class="service-card-title">e-Tech Partner</h3>
+              <p class="service-card-desc">
+                eCommerce Tech Partner es nuestra solución tecnológica diseñada para apoyar el
+                desarrollo, gestión y soporte técnico eCommerce. Nos enfocamos en implementar y
+                optimizar plataformas, automatizar procesos y ofrecer soporte continuo, asegurando
+                que las tiendas funcionen de manera eficiente y escalable.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════
+         BLOG — #HuellaNews
+    ══════════════════════════════════════════════════ -->
+    <section class="blog-section">
+      <div class="container">
+
+        <div class="blog-header" data-reveal>
+          <h2 class="blog-title">#HuellaNews</h2>
+          <a href="#" class="blog-cta">Ver todo</a>
+        </div>
+
+        <div class="blog-grid" data-reveal data-delay="1">
+
+          <!-- Post 1 -->
+          <article class="blog-card">
+            <a href="#" class="blog-card-link">
+              <div class="blog-card-thumb">
+                <div class="blog-card-img" style="background: linear-gradient(135deg, #b8c8f0 0%, #d4a8e8 50%, #e8b4d8 100%);"></div>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-card-date">19 de diciembre de 2025</span>
+                  <span class="blog-card-sep">—</span>
+                  <span class="blog-card-author">Huella Digital</span>
+                </div>
+                <h3 class="blog-card-headline">La importancia de las reseñas de clientes en tu tienda online...</h3>
+              </div>
+            </a>
+          </article>
+
+          <!-- Post 2 -->
+          <article class="blog-card">
+            <a href="#" class="blog-card-link">
+              <div class="blog-card-thumb">
+                <div class="blog-card-img" style="background: linear-gradient(135deg, #f0d4c0 0%, #e8c4a0 40%, #d4a880 100%);"></div>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-card-date">19 de diciembre de 2025</span>
+                  <span class="blog-card-sep">—</span>
+                  <span class="blog-card-author">Huella Digital</span>
+                </div>
+                <h3 class="blog-card-headline">Cómo el contenido de calidad impulsa las ventas...</h3>
+              </div>
+            </a>
+          </article>
+
+          <!-- Post 3 -->
+          <article class="blog-card">
+            <a href="#" class="blog-card-link">
+              <div class="blog-card-thumb">
+                <div class="blog-card-img" style="background: linear-gradient(135deg, #8090d8 0%, #a060c8 50%, #c080e0 100%);"></div>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-card-date">19 de diciembre de 2025</span>
+                  <span class="blog-card-sep">—</span>
+                  <span class="blog-card-author">Huella Digital</span>
+                </div>
+                <h3 class="blog-card-headline">Cómo el SEO puede impulsar tus ventas en eCommerce</h3>
+              </div>
+            </a>
+          </article>
+
+          <!-- Post 4 -->
+          <article class="blog-card">
+            <a href="#" class="blog-card-link">
+              <div class="blog-card-thumb">
+                <div class="blog-card-img" style="background: linear-gradient(135deg, #c8a0d8 0%, #b080c8 40%, #9060b0 100%);"></div>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-card-date">19 de diciembre de 2025</span>
+                  <span class="blog-card-sep">—</span>
+                  <span class="blog-card-author">Huella Digital</span>
+                </div>
+                <h3 class="blog-card-headline">Técnicas de SEO local para tiendas online: Atra...</h3>
+              </div>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+    <!-- ══════════════════════════════════════════════════
+         FAQ — Preguntas Frecuentes
+    ══════════════════════════════════════════════════ -->
+    <section class="faq-section">
+      <div class="container">
+
+        <div class="faq-list" id="faq-list">
+
+          <div class="faq-item is-open">
+            <button class="faq-trigger" aria-expanded="true">
+              <span>¿Cuáles son sus principales servicios como agencia especializada en eCommerce?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 10H15M10 5V15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <div class="faq-body"><div>
+              <p>En Huella Agencia Digital, el eCommerce no es solo un servicio, sino el núcleo de nuestra especialización. Comenzamos como una agencia de eCommerce dedicada al diseño, desarrollo e implementación de tiendas en línea y sistemas de integración para diferentes países.</p>
+              <p>Nuestra evolución y el deseo de ofrecer más a nuestros clientes nos llevó a ampliar nuestra gama de servicios para incluir estrategias de crecimiento a medida, personalización avanzada y soluciones integrales de tecnología.</p>
+            </div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>¿Qué diferencia a Huella de otras agencias especializadas en eCommerce?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 10H15M10 5V15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <div class="faq-body"><div>
+              <p>Nos diferenciamos por nuestro enfoque integral: combinamos estrategia, tecnología y creatividad en cada proyecto. No solo implementamos tiendas, sino que acompañamos a nuestros clientes en todo el proceso de escalamiento digital con métricas claras y resultados medibles.</p>
+            </div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>¿Huella trabaja con empresas pequeñas o solo medianas y grandes?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 10H15M10 5V15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <div class="faq-body"><div>
+              <p>Trabajamos con negocios de todos los tamaños. Creemos que cada empresa, sin importar su escala, tiene el potencial de crecer en línea. Adaptamos nuestras soluciones y presupuestos a la etapa actual de cada cliente, desde marcas emergentes hasta empresas consolidadas.</p>
+            </div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>¿Cuánto cuesta trabajar un proyecto eCommerce con Huella?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 10H15M10 5V15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <div class="faq-body"><div>
+              <p>El costo varía según el alcance, plataforma y objetivos de cada proyecto. Ofrecemos propuestas personalizadas tras una consulta inicial sin costo. Contáctanos y te presentamos un plan adaptado a tu presupuesto y metas de negocio.</p>
+            </div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>¿Realizan integraciones de eCommerce con diferentes sistemas y/o marketplaces?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 10H15M10 5V15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <div class="faq-body"><div>
+              <p>Sí. Realizamos integraciones con ERPs, CRMs, sistemas de pago, logística, marketplaces como Mercado Libre, Falabella, Ripley y más. Trabajamos sobre plataformas como Shopify, VTEX y WooCommerce para conectar todos los canales de venta de forma eficiente.</p>
+            </div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>¿Tienen estrategias para poder crecer en ventas y posicionarnos en el mercado?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 10H15M10 5V15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <div class="faq-body"><div>
+              <p>Absolutamente. Nuestro servicio e-Growth Partner está diseñado exactamente para eso: SEO, SEM, CRO, analítica eCommerce y estrategia digital integrada. Diseñamos planes de crecimiento escalables y medibles, enfocados en aumentar tus ventas y visibilidad en el mercado.</p>
+            </div></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════ -->
+  <footer id="contacto">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <img src="assets/LOGO-1.webp" alt="Huella Agencia Digital">
+        </div>
+        <div class="footer-links">
+          <a href="#">Servicios</a>
+          <a href="#">Proyectos</a>
+          <a href="#">Sobre nosotros</a>
+          <a href="mailto:hola@huelladigital.pe">hola@huelladigital.pe</a>
+        </div>
+        <p class="footer-copy">&copy; 2024 Huella Agencia Digital</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/clients.js"></script>
+  <script src="js/partners.js" defer></script>
+
+</body>
+</html>
