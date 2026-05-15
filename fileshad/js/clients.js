@@ -12,20 +12,15 @@
  */
 
 const clients = [
-  { name: 'Roxana Pardo',   year: 2024, color: '#6B2EFF', accent: '#A87CFF' },
-  { name: 'Magitech',       year: 2024, color: '#1A1A2E', accent: '#E94560' },
-  { name: 'Origens',        year: 2024, color: '#0D3B5E', accent: '#FFD700' },
-  { name: 'Cinco AM',       year: 2024, color: '#0F3460', accent: '#FFA500' },
-  { name: 'Grupo DJJ',      year: 2024, color: '#1B4332', accent: '#95D5B2' },
-  { name: 'RGM',            year: 2024, color: '#2D2D2D', accent: '#F5F5F5' },
-  { name: 'R&M Portátiles', year: 2023, color: '#1A1A2E', accent: '#00D4FF' },
-  { name: 'Vakimú',         year: 2023, color: '#3D0C11', accent: '#FF6B6B' },
-  { name: 'Jiang',          year: 2023, color: '#1C1C1C', accent: '#FF4500' },
-  { name: 'Audioplace',     year: 2023, color: '#0D1B2A', accent: '#4FC3F7' },
-  { name: 'Sydney',         year: 2023, color: '#2E1A47', accent: '#E040FB' },
-  { name: 'Almendra',       year: 2023, color: '#3E2723', accent: '#FFCCBC' },
-  { name: 'Savi Safety',    year: 2022, color: '#01579B', accent: '#FFD600' },
-  { name: 'Barker',         year: 2022, color: '#1B5E20', accent: '#A5D6A7' },
+  { name: 'UPC',                      year: 2024, color: '#003DA5', accent: '#FFD700' },
+  { name: 'Caja Arequipa',            year: 2024, color: '#CC0000', accent: '#FFEB3B' },
+  { name: 'Mr. Peet',                 year: 2024, color: '#2E7D32', accent: '#A5D6A7' },
+  { name: 'Villa Victoria',           year: 2024, color: '#4E342E', accent: '#D7CCC8' },
+  { name: 'Viva Tierra Inmobiliaria', year: 2024, color: '#1B5E20', accent: '#DAFF00' },
+  { name: 'Café Grosso',              year: 2024, color: '#3E2723', accent: '#FFAB91' },
+  { name: 'GMS',                      year: 2024, color: '#1A237E', accent: '#82B1FF' },
+  { name: 'PG Inspecciones',          year: 2024, color: '#01579B', accent: '#80D8FF' },
+  { name: 'Prime Cargo USA',          year: 2023, color: '#BF360C', accent: '#FFAB91' },
 ];
 
 /* ── Referencias DOM ── */
